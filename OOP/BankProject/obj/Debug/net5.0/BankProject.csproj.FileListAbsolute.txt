@@ -1,0 +1,16 @@
+C:\Users\lpotr\Desktop\Repos\OOP\OOP\BankProject\bin\Debug\net5.0\BankProject.exe
+C:\Users\lpotr\Desktop\Repos\OOP\OOP\BankProject\bin\Debug\net5.0\BankProject.deps.json
+C:\Users\lpotr\Desktop\Repos\OOP\OOP\BankProject\bin\Debug\net5.0\BankProject.runtimeconfig.json
+C:\Users\lpotr\Desktop\Repos\OOP\OOP\BankProject\bin\Debug\net5.0\BankProject.runtimeconfig.dev.json
+C:\Users\lpotr\Desktop\Repos\OOP\OOP\BankProject\bin\Debug\net5.0\BankProject.dll
+C:\Users\lpotr\Desktop\Repos\OOP\OOP\BankProject\bin\Debug\net5.0\ref\BankProject.dll
+C:\Users\lpotr\Desktop\Repos\OOP\OOP\BankProject\bin\Debug\net5.0\BankProject.pdb
+C:\Users\lpotr\Desktop\Repos\OOP\OOP\BankProject\obj\Debug\net5.0\BankProject.csproj.AssemblyReference.cache
+C:\Users\lpotr\Desktop\Repos\OOP\OOP\BankProject\obj\Debug\net5.0\BankProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lpotr\Desktop\Repos\OOP\OOP\BankProject\obj\Debug\net5.0\BankProject.AssemblyInfoInputs.cache
+C:\Users\lpotr\Desktop\Repos\OOP\OOP\BankProject\obj\Debug\net5.0\BankProject.AssemblyInfo.cs
+C:\Users\lpotr\Desktop\Repos\OOP\OOP\BankProject\obj\Debug\net5.0\BankProject.csproj.CoreCompileInputs.cache
+C:\Users\lpotr\Desktop\Repos\OOP\OOP\BankProject\obj\Debug\net5.0\BankProject.dll
+C:\Users\lpotr\Desktop\Repos\OOP\OOP\BankProject\obj\Debug\net5.0\ref\BankProject.dll
+C:\Users\lpotr\Desktop\Repos\OOP\OOP\BankProject\obj\Debug\net5.0\BankProject.pdb
+C:\Users\lpotr\Desktop\Repos\OOP\OOP\BankProject\obj\Debug\net5.0\BankProject.genruntimeconfig.cache
