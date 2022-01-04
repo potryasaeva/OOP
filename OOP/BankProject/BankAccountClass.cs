@@ -14,31 +14,39 @@ namespace BankProject
             deposit,
             investment
         }
-        
+
+
         //поля
         private readonly int _number;
-        private readonly string _balance;
+        private decimal _balance;
         private readonly accountType _type;
+
 
         //свойства
         public long Number
         {
-            get 
-            { 
-                return _number; 
+            get
+            {
+                return _number;
             }
         }
 
-        public string Balance 
+        public decimal Balance
         {
             get
             {
                 return _balance;
             }
+
+            set
+            {
+                _balance = value;
+            }
+
         }
 
-        public BankAccountClass.accountType Type 
-        
+        public BankAccountClass.accountType Type
+
         {
             get
             {
@@ -47,38 +55,45 @@ namespace BankProject
         }
 
 
-
         //конструкторы
         public BankAccountClass() : this(0)
         {
-            
-        }
-     
-        public BankAccountClass(BankAccountClass.accountType type) : this(string.Empty, type)
-        {
-            _balance = SetBalance();
-            
+
         }
 
-        public BankAccountClass( string balance, BankAccountClass.accountType type)
+        public BankAccountClass(BankAccountClass.accountType type) : this(0, type)
+        {
+            _balance = SetBalance();
+
+        }
+
+        public BankAccountClass(decimal balance, BankAccountClass.accountType type)
         {
             _number = ConfigureNumber();
             _balance = balance;
             _type = type;
         }
 
-        public int ConfigureNumber() 
+
+        //методы
+        public int ConfigureNumber()
         {
             Random rnd = new Random();
             int uniqueNumber = rnd.Next(10000000, int.MaxValue);
             return uniqueNumber;
         }
 
-        public string SetBalance()
+        public decimal SetBalance()
         {
             Random rnd = new Random();
-            int balance = rnd.Next(100000, int.MaxValue);
-            return balance.ToString() + ".00"; 
+            decimal balance = new Decimal(rnd.Next(100000, int.MaxValue) + 0.02);
+            return balance;
+        }
+
+        public void Moneytransfer(BankAccountClass BankAccount, int amount)
+        {
+            BankAccount.Balance -= amount;
+            Balance += amount;
         }
 
     }

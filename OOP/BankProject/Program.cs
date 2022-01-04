@@ -4,13 +4,36 @@ namespace BankProject
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            BankAccountClass account = new BankAccountClass("526.00", BankAccountClass.accountType.credit);
-            Console.WriteLine($"Account number: {account.Number} \nAccount balance: {account.Balance} \nAccount type: {account.Type}");
+            BankAccountClass accountFrom = new BankAccountClass(BankAccountClass.accountType.current);
+            BankAccountClass accountTo = new BankAccountClass(BankAccountClass.accountType.credit);
             
-            BankAccountClass account1 = new BankAccountClass(BankAccountClass.accountType.budget);
-            Console.WriteLine($"Account number: {account1.Number} \nAccount balance: {account1.Balance} \nAccount type: {account1.Type}");
+            Console.WriteLine($"{accountFrom.Type} account: \n  number: {accountFrom.Number} \n  balance: {accountFrom.Balance}");
+            Console.WriteLine("\n________________________________\n");
+            Console.WriteLine($"{accountTo.Type} account: \n  number: {accountTo.Number} \n  balance: {accountTo.Balance}");
+
+            Console.WriteLine("\n________________________________\n");
+
+            Console.WriteLine("Please, enter integer amount for transaction:");
+            string enteredValue = Console.ReadLine();
+
+            if (Int32.TryParse(enteredValue, out int amount))
+            {
+                accountTo.Moneytransfer(accountFrom, amount);
+                Console.WriteLine($"{accountFrom.Type} account: \n  number: {accountFrom.Number} \n  balance: {accountFrom.Balance}");
+                Console.WriteLine("\n________________________________\n");
+                Console.WriteLine($"{accountTo.Type} account: \n  number: {accountTo.Number} \n  balance: {accountTo.Balance}");
+
+
+            }
+            else
+            {
+                Console.WriteLine($"You entered not integer amount. plz try again");
+                Main();
+            }
+
+            
 
         }
     }
