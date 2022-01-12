@@ -1,27 +1,21 @@
 ﻿using System;
 
-namespace Building
+namespace BuildingProject
 {
     class Program
     {
         static void Main()
         {
 
-            BuildingClass building = new BuildingClass(963, 3, 60, 5);
-            Console.WriteLine(building.UniqueNumber);
-            Console.WriteLine($"Floors height is {building.CalculateFloorHigh()}");
-            Console.WriteLine($"Quantity of apartments in entrance is {building.CalculateQuantityOfApartmentsInEntrance()}");
-            Console.WriteLine($"Quantity of apartments on the floor is {building.CalculateQuantityOfApartmentsOnFloor()}");
+            Creator.CreateBuilding(963,3,12,4);
+            Creator.CreateBuilding(1025, 5, 10, 2);
+            Creator.CreateBuilding(3560, 10, 25, 3);
+            Creator.CreateBuilding(256, 2, 3, 6);
+            Creator.BuildingsInfo();
+            Console.WriteLine();
 
-            //проверка уникальности номера
-            BuildingClass building1 = new BuildingClass(963, 3, 60, 5);
-            Console.WriteLine(building1.UniqueNumber);
-
-            BuildingClass building2 = new BuildingClass(963, 3, 60, 5);
-            Console.WriteLine(building2.UniqueNumber);
-
-            BuildingClass building3 = new BuildingClass(963, 3, 60, 5);
-            Console.WriteLine(building3.UniqueNumber);
+            Creator.DeleteBuilding(123460);
+            Creator.BuildingsInfo();
 
         }
     }
