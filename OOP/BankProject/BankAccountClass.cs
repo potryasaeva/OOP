@@ -96,5 +96,32 @@ namespace BankProject
             Balance += amount;
         }
 
+        public static bool operator ==(BankAccountClass a, BankAccountClass b)
+        {
+            return a.Number == b.Number & a.Balance == b.Balance & a.Type == b.Type;
+        }
+
+
+        public static bool operator !=(BankAccountClass a, BankAccountClass b)
+        {
+            return a.Number != b.Number & a.Balance != b.Balance & a.Type != b.Type;
+        }
+
+        public override bool Equals(object obj)
+        {
+            BankAccountClass account = (BankAccountClass)obj;
+            return (Number == account.Number && Balance == account.Balance && Type == account.Type);
+        }
+
+        public override int GetHashCode()
+        {
+            return Number.GetHashCode() ^ Balance.GetHashCode() ^ Type.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return "Bank account number " + Number + "\nbalance " + Balance + "\ntype " + Type;
+        }
     }
 }
+

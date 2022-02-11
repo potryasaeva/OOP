@@ -8,8 +8,22 @@ namespace BankProject
         {
             BankAccountClass accountFrom = new BankAccountClass(BankAccountClass.accountType.current);
             BankAccountClass accountTo = new BankAccountClass(BankAccountClass.accountType.credit);
-            
-            Console.WriteLine($"{accountFrom.Type} account: \n  number: {accountFrom.Number} \n  balance: {accountFrom.Balance}");
+
+            Console.WriteLine(accountFrom);
+            Console.WriteLine("\n________________________________\n");
+            Console.WriteLine(accountTo);
+
+            Console.WriteLine(accountFrom == accountTo);
+            Console.WriteLine(accountFrom == accountFrom);
+            Console.WriteLine(accountFrom != accountTo);
+            Console.WriteLine(accountFrom != accountFrom);
+            Console.WriteLine(accountFrom.Equals(accountTo));
+            Console.WriteLine(accountFrom.Equals(accountFrom));
+            Console.WriteLine(accountFrom.GetHashCode());
+            Console.WriteLine(accountTo.GetHashCode());
+
+
+            /*Console.WriteLine($"{accountFrom.Type} account: \n  number: {accountFrom.Number} \n  balance: {accountFrom.Balance}");
             Console.WriteLine("\n________________________________\n");
             Console.WriteLine($"{accountTo.Type} account: \n  number: {accountTo.Number} \n  balance: {accountTo.Balance}");
 
@@ -33,7 +47,7 @@ namespace BankProject
                 Main();
             }
 
-            
+            */
 
         }
     }
